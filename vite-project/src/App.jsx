@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Mycomponent from './MyComponent'
+import SecondComponent from './SecondComponent'
 
 function App() {
   
@@ -16,7 +17,13 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
+    <div className='component-container'>
+
       <Mycomponent></Mycomponent>
+      <hr/>
+      <SecondComponent></SecondComponent>
+      </div>
       <h1>Vite + React</h1>
       
     </>
