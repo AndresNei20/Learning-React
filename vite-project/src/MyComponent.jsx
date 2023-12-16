@@ -1,13 +1,24 @@
 import React from "react";
 
 const Mycomponent = () => {
+
+    const name = "Andres";
+    const lvl = 14
+
+    //You can also use an object 
+    let user = {
+        name: "Andres" ,
+        last: "Nei" ,
+        level: 15 ,
+    }
+
     return (
         <>
         <div className="first-comp">
             <h2>Hello guys</h2>
-                    <li>number 1</li>
-                    <li>number 2</li>
-                    <li>number 3</li>
+                    <li>Name: {user.name}</li>
+                    <li>Name: {user.last}</li>
+                    <li>Level : {user.level}</li>
         </div>
         </>
     )
