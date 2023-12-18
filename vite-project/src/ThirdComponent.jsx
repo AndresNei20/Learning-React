@@ -25,4 +25,9 @@ ThirdComponent.propTypes = {
     userCard: Proptypes.object
 }
 
+ThirdComponent.defaultProps = {
+    name: "John",
+    last: "Doe"
+}
+
 export default ThirdComponent
