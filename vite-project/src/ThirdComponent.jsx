@@ -20,7 +20,7 @@ const ThirdComponent = ({name, last, userCard}) => {
 }
 
 ThirdComponent.propTypes = {
-    nombre: Proptypes.string.isRequired, //Proptypes.string.isRequired  this mean that the prop must to have content
+    name: Proptypes.string.isRequired, //Proptypes.string.isRequired  this mean that the prop must to have content
     last: Proptypes.string , //if this prop doesnt come with any data, this going to be void or undefined
     userCard: Proptypes.object
 }
