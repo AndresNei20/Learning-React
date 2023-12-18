@@ -4,8 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Mycomponent from './MyComponent'
 import SecondComponent from './SecondComponent'
+import ThirdComponent from './ThirdComponent'
 
 function App() {
+
+  const user_card = {
+    height: "179cm",
+    weight: "70kg",
+    blood: "O+",
+    state: "Healthy"
+  }
   
   return (
     <>
@@ -23,7 +31,15 @@ function App() {
       <Mycomponent></Mycomponent>
       <hr/>
       <SecondComponent></SecondComponent>
-      </div>
+      <hr/>
+      <ThirdComponent 
+        name = "Andres" 
+        last = "Nei"
+        userCard = {user_card}
+      >
+      </ThirdComponent>
+
+    </div>
       <h1>Vite + React</h1>
       
     </>
