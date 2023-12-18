@@ -5,6 +5,7 @@ import './App.css'
 import Mycomponent from './MyComponent'
 import SecondComponent from './SecondComponent'
 import ThirdComponent from './ThirdComponent'
+import EventsComponent from './EventsComponents'
 
 function App() {
 
@@ -38,6 +39,8 @@ function App() {
         userCard = {user_card}
       >
       </ThirdComponent>
+      <hr/>
+      <EventsComponent></EventsComponent>
 
     </div>
       <h1>Vite + React</h1>
