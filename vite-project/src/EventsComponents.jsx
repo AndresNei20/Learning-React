@@ -10,6 +10,14 @@ const EventsComponent = () => {
         alert("hello, you clicked " + name)
     }
 
+    const uEnter = (e, action) => {
+        alert("Hi, you " + action + " the box")
+    }
+
+    const uLeave = (e, action) => {
+        alert("Hi, you " + action + " the box")
+    }
+
     return(
 
         <div className="events-components">
@@ -17,10 +25,21 @@ const EventsComponent = () => {
             <p>
             <button onClick={e => handleClick(e, "Andres")}>Click me</button>
             </p>
+
             <p>
             {/**double click event */}
             <button onDoubleClick={e => handleDoubleClick(e, "Jose")}>Double click me</button>
             </p>
+
+            
+            <div id="box"
+             onMouseEnter={ e => uEnter(e, "ENTER")}
+             onMouseLeave={e => uLeave(e, "LEAVE")}
+             >
+            {/**onMouseEnter onMOuseLeave */}
+            Hover your mouse!!!
+            </div>
+        
         </div>
 
     )
