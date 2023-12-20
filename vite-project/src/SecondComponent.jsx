@@ -34,6 +34,7 @@ const SecondComponent = () => {
                  : (
                 console.log("there is no more than One character") //We are using ternary condition or Ternarias, its like an if/else. ? = if  : = else
                  )
+                 
             }
         </div>
     )
