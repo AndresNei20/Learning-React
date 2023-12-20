@@ -18,6 +18,14 @@ const EventsComponent = () => {
         alert("Hi, you " + action + " the box")
     }
 
+    const urInside = (e) => {
+        console.log("You are at the input, introduce your name")
+    }
+
+    const urOut = (e) => {
+        console.log("You are out the input, introduce your name")
+    }
+
     return(
 
         <div className="events-components">
@@ -39,6 +47,11 @@ const EventsComponent = () => {
             {/**onMouseEnter onMOuseLeave */}
             Hover your mouse!!!
             </div>
+
+            <p>
+                {/**onFocus onBlur */}
+                <input type="text" onFocus={urInside} onBlur={urOut} placeholder="Write your name"/>
+            </p>
         
         </div>
 
