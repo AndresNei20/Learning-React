@@ -43,3 +43,28 @@
   padding: 5px;
   color: #444;
 }
+
+.label-green{
+  background-color: #61dafb;
+  color: #444;
+}
+
+/* .exercise-container{
+  display:flex;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;
+} */
+
+button{
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:hover{
+  background-color: #3bc5eb;
+  color: rgb(227, 240, 248);
+  
+}

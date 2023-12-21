@@ -1,0 +1,14 @@
+1. Create a component
+
+2. Receive a prop with the actual year
+
+3. You must to use Functions to obtain the year
+
+4. Use state and events on 2 buttons
+    - Go to next year
+    - Go to previous year
+    - Show all the time the year on the screen
+
+5. Validate year like a number and the year must be required (prop)
+
+6. Change the year with an input text and chage it dynamically
