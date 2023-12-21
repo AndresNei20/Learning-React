@@ -12,17 +12,20 @@ export const MyFirstState = () => {
 
     const [name, setName] = useState(" John Doe ");
 
-    const changeName = e => {
-        setName(" Andres Nei ")
+    const changeName = (e, staticName) => {
+        setName(staticName)
     }
 
     return (
         <div>
             <h3>Component: MyFirstState</h3>
-            <strong>
+            <strong className="label">
                 {name}
             </strong>
-            <button onClick={changeName}> Change </button>
+            <button onClick={e => changeName(e, "Andres Nei ")}> Change name for Andres </button>
+            <br/>
+            <input type="text" placeholder="Change the name" onChange={e => changeName(e, e.target.value)}></input>
+            {/* <input type="text" placeholder="Change the name" onKeyUp={e => changeName(e, e.target.value)}></input> */}
         </div>
 
     )
