@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { MyFirstState } from './components/MyFirstState';
-import { Exercise } from './components/Exercise';
+import { Exercise } from './components/exercise';
 
 function App() {
 

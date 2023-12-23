@@ -45,3 +45,12 @@
   margin: 15px;
   display: block;
 }
+
+.label-green{
+  background-color: lightgreen;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  margin: 15px;
+  display: block;
+}
