@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import TestComponent from './components/TestComponent';
+import AjaxComponent from './components/AjaxComponent';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       <TestComponent></TestComponent>
+      <AjaxComponent></AjaxComponent>
       </header>
     </div>
   );
