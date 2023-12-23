@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import AdviceComponent from "./AdviceComponent";
 
 const TestComponent = () => {
   const [user, setUser] = useState("Andres Nei");
@@ -42,6 +43,7 @@ const TestComponent = () => {
         ></input>
         <button onClick={modDate}>Change date</button>
       </p>
+      { user == "Pao" && <AdviceComponent></AdviceComponent> }
     </div>
   );
 };
