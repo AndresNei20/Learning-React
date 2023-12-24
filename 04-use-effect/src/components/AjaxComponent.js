@@ -4,6 +4,7 @@ const AjaxComponent = () => {
     
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true)
+    const [errors, setErrors] = useState("")
     
     //generic function
     const getStaticUsers = () => {
@@ -48,11 +49,17 @@ const AjaxComponent = () => {
     const getUsersAsyncAwait = () =>{
 
         setTimeout(async() => {
-            const req = await fetch('https://reqres.in/api/users?page=1');
+            try{
+                 const req = await fetch('https://reqres.in/api/users234?page=1');
             const {data} = await req.json();
             setUsers(data);
             setLoading(false);
-            console.log(data);
+            console.log(data); 
+            }catch(error){
+                console.log(error.message);
+                setErrors(error.message);
+            }
+          
         }, 2000);
     }
     
@@ -61,14 +68,20 @@ const AjaxComponent = () => {
         //getUsersAjaxPms();
         //getStaticUsers();
     }, [])
-    
-    if(loading == true){
+
+    if(errors !== ""){
+        return(
+            <div className="errors">
+                {errors}
+            </div>
+        )
+    }else if(loading == true){
         return(
         <div className="loading">
             <h2>Loading data...</h2>
         </div>
     )
-    }else{
+    }else if(loading == false && errors === ""){
          return (
     <div>
       <h2>List of user from Ajax</h2>
