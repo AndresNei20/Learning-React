@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 const AjaxComponent = () => {
     
     const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(true)
     
     //generic function
     const getStaticUsers = () => {
@@ -44,11 +45,15 @@ const AjaxComponent = () => {
         })
     }
 
-    const getUsersAsyncAwait = async() =>{
-        const req = await fetch('https://reqres.in/api/users?page=1');
-        const {data} = await req.json();
-        setUsers(data)
-        console.log(data)
+    const getUsersAsyncAwait = () =>{
+
+        setTimeout(async() => {
+            const req = await fetch('https://reqres.in/api/users?page=1');
+            const {data} = await req.json();
+            setUsers(data);
+            setLoading(false);
+            console.log(data);
+        }, 2000);
     }
     
     useEffect(() => {
@@ -57,21 +62,33 @@ const AjaxComponent = () => {
         //getStaticUsers();
     }, [])
     
-    
-    
-  return (
+    if(loading == true){
+        return(
+        <div className="loading">
+            <h2>Loading data...</h2>
+        </div>
+    )
+    }else{
+         return (
     <div>
       <h2>List of user from Ajax</h2>
       <ol className="users">
         {
             users.map(user =>{
                 console.log(user)
-                return <li key={user.id}>{user.first_name}{user.last_name}</li>
+                return <li key={user.id}>
+                            <img src={user.avatar} width="20"/>
+                            {user.first_name}{user.last_name}
+                      </li>
             })
         }
       </ol>
     </div>
   );
 };
+    }
+    
+    
+ 
 
 export default AjaxComponent;
