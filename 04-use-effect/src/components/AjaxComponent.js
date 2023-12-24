@@ -43,9 +43,17 @@ const AjaxComponent = () => {
             console.log(error)
         })
     }
+
+    const getUsersAsyncAwait = async() =>{
+        const req = await fetch('https://reqres.in/api/users?page=1');
+        const {data} = await req.json();
+        setUsers(data)
+        console.log(data)
+    }
     
     useEffect(() => {
-        getUsersAjaxPms();
+        getUsersAsyncAwait();
+        //getUsersAjaxPms();
         //getStaticUsers();
     }, [])
     
