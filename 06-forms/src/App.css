@@ -88,3 +88,10 @@ form button:hover{
   background-color: #ccc;
   color: #444;
 }
+
+.user-info-label{
+  background-color: #ccc;
+  border: 1px solid #444;
+  color: #444;
+  padding: 10px;
+}
