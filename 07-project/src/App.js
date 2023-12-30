@@ -1,4 +1,8 @@
+import Add from "./components/Add";
+import List from "./components/List";
+import Search from "./components/Search";
 
+/* We just use 3 components (Add, List, Search) because those were the only ones that uses javascript funcion and are not static */
 
 function App() {
   return (
@@ -21,67 +25,15 @@ function App() {
         </nav>
 
         <section className="content">
-            <article className="movie-item">
-                <h3 className="title"> Web development</h3>
-                <p className="description">andresnei.co</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-            <article className="movie-item">
-                <h3 className="title"> Web development</h3>
-                <p className="description">andresnei.co</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-            <article className="movie-item">
-                <h3 className="title"> Web development</h3>
-                <p className="description">andresnei.co</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-            <article className="movie-item">
-                <h3 className="title"> Web development</h3>
-                <p className="description">andresnei.co</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-            <article className="movie-item">
-                <h3 className="title"> Web development</h3>
-                <p className="description">andresnei.co</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-            <article className="movie-item">
-                <h3 className="title"> Web development</h3>
-                <p className="description">andresnei.co</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
+          {/**list of movies */}
+          <List></List>       
         </section>
 
         <aside className="side">
-            <div className="search">
-                <h3 className="title">Search</h3>
-                <form action="">
-                    <input type="text"/>
-                    <button>Search</button>
-                </form>
-            </div>
+            {/**side bar, search bar */}
+            <Search></Search>
 
-            <div className="add">
-                <h3 className="title">Add movie</h3>
-                <form action="">
-                    <input type="text" aria-placeholder="Title"/>
-                    <textarea placeholder="Description"></textarea>
-                    <input type="submit"/>
-                </form>
-            </div>
+            <Add></Add>
         </aside>
 
         <footer className="footer">
